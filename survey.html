@@ -1,0 +1,224 @@
+<style>
+  #wrapper {
+    background-color:rgb(214, 236, 250);
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  
+  input[type=text], [type = email], [type = number], select {
+  width: 100%;
+  padding: 10px;
+  align-items: right;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 3px ridge lightgray;
+}
+
+#submit {
+  width: 50%;
+  margin: auto;
+  background-color: rgb(74, 182, 248);
+  color: white;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#bold-text {
+
+  width: 100%;
+  height: 100px;
+
+}
+
+.bold-text {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.clue {
+  font-weight: normal;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px ridge lightgray;
+  border-radius: 5px;
+}
+</style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer Satisfaction Survey</title>
+    </head>
+
+    <body>
+        <main id="wrapper">
+            <h1 id="title">Customer Satisfaction Survey</h1>
+            <p id="description">Thank you for taking the time to help us improve our courses</p>
+
+            <form id="survey-form">
+                <div class="form-group">
+                  <label id="name-label" class="bold-text" for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label id="email-label" class="bold-text" for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label id="number-label" for="number" class="bold-text"
+                    >Age<span class="clue">(optional)</span></label
+                  >
+                  <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="10"
+                    max="99"
+                    class="form-control"
+                    placeholder="Age"
+                  />
+                </div>
+                <div class="form-group">
+                  <p class="bold-text">Which course did you attend?</p>
+                  <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select course</option>
+                    <option value="EMD">EMD</option>
+                    <option value="EFD">EFD</option>
+                    <option value="EPD">EPD</option>
+                    <option value="ETC">ETC</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+            
+                <div class="form-group" >
+                  <p class="bold-text">Would you recommend this course to a colleague?</p>
+                  <label>
+                    <input
+                      name="user-recommend"
+                      value="definitely"
+                      type="radio"
+                      class="input-radio"
+                      checked
+                    />Definitely</label
+                  >
+                  <label>
+                    <input
+                      name="user-recommend"
+                      value="maybe"
+                      type="radio"
+                      class="input-radio"
+                    />Maybe</label
+                  >
+            
+                  <label
+                    ><input
+                      name="user-recommend"
+                      value="not-sure"
+                      type="radio"
+                      class="input-radio"
+                    />Not sure</label
+                  >
+                </div>
+            
+                <div class="form-group">
+                  <p class="bold-text">
+                    What is your favorite thing about this course?
+                  </p>
+                  <select id="most-like" name="mostLike" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="scenarios">Scenarios</option>
+                    <option value="Calls">Listen to Calls</option>
+                    <option value="instructor">Instructor</option>
+                    <option value="material">Material</option>
+                  </select>
+                </div>
+            
+                <div class="form-group">
+                  <p class="bold-text">
+                    What would you like to see improved?
+                    <span class="clue">(Check all that apply)</span>
+                  </p>
+            
+                  <label
+                    ><input
+                      name="prefer"
+                      value="material"
+                      type="checkbox"
+                      class="input-checkbox"
+                    />Material</label
+                  >
+                  <label>
+                    <input
+                      name="prefer"
+                      value="instructor"
+                      type="checkbox"
+                      class="input-checkbox"
+                    />Instructor</label
+                  >
+                  <label
+                    ><input
+                      name="prefer"
+                      value="scenarios"
+                      type="checkbox"
+                      class="input-checkbox"
+                    />Scenarios</label
+                  >
+                  <label
+                    ><input
+                      name="prefer"
+                      value="call-varieties"
+                      type="checkbox"
+                      class="input-checkbox"
+                    />Call Varieties</label
+                  >
+                </div>
+            
+                <div class="form-group">
+                  <label class="bold-text">Any comments or suggestions?</label>
+                  <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Enter your comment here..."
+                  ></textarea>
+                </div>
+            
+                <div class="form-group">
+                  <button type="submit" id="submit" class="submit-button">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+
+        </main>
+    </body>
+</html>
